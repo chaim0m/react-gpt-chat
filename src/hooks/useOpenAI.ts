@@ -13,8 +13,6 @@ const useOpenAI = (): OpenAIApi => {
 
         useEffect(() => {
             const fullPrompt = getInitPrompt(name, date);
-            // const chunkSize = Math.floor(fullPrompt.length / 3);
-            // const stringChunks = chunk(fullPrompt, chunkSize);
             if (!isApiCalledRef.current) {
                 isApiCalledRef.current = true;
                 openai.createCompletion({
