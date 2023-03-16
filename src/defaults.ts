@@ -11,6 +11,7 @@ const defaultSettings = {
     "LANGUAGE": "English"
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const hebrewSettings =
     {
         "STARTING_PROMPT": "Una conversación entre una mujer y un hombre.",

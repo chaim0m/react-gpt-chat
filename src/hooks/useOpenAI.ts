@@ -1,7 +1,5 @@
 import {useEffect, useState, useRef} from 'react';
 import {useSearchParams} from "react-router-dom";
-// @ts-ignore
-import {chunk, throttle} from "lodash";
 import {Configuration, OpenAIApi} from 'openai';
 import defaultSettings from "../defaults";
 import {getInitPrompt} from "../utils";
@@ -27,7 +25,7 @@ const useOpenAI = (): OpenAIApi => {
                     presence_penalty: defaultSettings['PRESENCE_PENALTY'],
                 })
             }
-        }, []);
+        }, [date, name, openai]);
         return openai;
     }
 ;

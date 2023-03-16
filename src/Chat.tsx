@@ -7,6 +7,7 @@ const Chat = () => {
     const openai = useOpenAI();
     const [chatCtl] = useState(new ChatController({showDateTime: true}));
 
+    // eslint-disable-next-line
     const onResponse = async (req: any) => {
         const isSelf = chatCtl.getMessages()[chatCtl.getMessages().length - 1].self
         if (isSelf) {
@@ -51,7 +52,7 @@ const Chat = () => {
             type: 'text',
             placeholder: 'Please enter something',
         }, onResponse);
-    }, []);
+    }, [onResponse]);
 
     useMemo(() => {
         handleMessage(chatCtl);
