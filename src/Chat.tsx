@@ -6,6 +6,7 @@ import useOpenAI from "./hooks/useOpenAI";
 const Chat = () => {
     const openai = useOpenAI();
     const [chatCtl] = useState(new ChatController({showDateTime: true}));
+
     const onResponse = async (req: any) => {
         const isSelf = chatCtl.getMessages()[chatCtl.getMessages().length - 1].self
         if (isSelf) {
@@ -41,7 +42,7 @@ const Chat = () => {
     const handleMessage = useCallback(async (chatCtl: ChatController): Promise<void> => {
         await chatCtl.addMessage({
             type: 'text',
-            content: `Hi I am a X, please feel free to ask any questions.`,
+            content: `Hi,`,
             self: false,
             avatar: '-',
         });
