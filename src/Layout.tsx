@@ -17,13 +17,14 @@ const Layout = ({children}: LayoutProps) => {
     return (
         <ThemeProvider theme={muiTheme}>
             <CssBaseline/>
-            <Box sx={{height: '100%', backgroundColor: 'gray'}}>
+            <Box sx={{height: '98vh', backgroundColor: 'gray'}}>
                 <Box
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         height: '100%',
                         maxWidth: '640px',
+                        maxHeight: '98vh',
                         marginLeft: 'auto',
                         marginRight: 'auto',
                         bgcolor: 'background.default',
@@ -37,7 +38,7 @@ const Layout = ({children}: LayoutProps) => {
                         demo site.
                     </Typography>
                     <Divider/>
-                    <Box sx={{flex: '1 1 0%', minHeight: 0}}>
+                    <Box sx={{flex: '1 1 0%'}}>
                         {children}
                     </Box>
                 </Box>
