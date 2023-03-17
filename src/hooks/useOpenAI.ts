@@ -8,7 +8,8 @@ const useOpenAI = (): OpenAIApi => {
         const [searchParams] = useSearchParams();
         const name = searchParams.get("name") ?? "";
         const date = searchParams.get("date") ?? "";
-        const [openai] = useState(() => new OpenAIApi(new Configuration({apiKey: "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"})));
+        const apiKey = "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";
+        const [openai] = useState(() => new OpenAIApi(new Configuration({apiKey})));
         const isApiCalledRef = useRef(false);
 
         useEffect(() => {
